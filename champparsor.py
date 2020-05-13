@@ -2,7 +2,7 @@
 #Please execute the code in python 3
 #
 #Run command :
-#        python champparsor.py <schema location> <file location>
+#        python champparsor.py <filelocation> <schemalocation>
 #
 #Example :
 #        python champparsor.py  '/users/ganesh/desktop/onechamp/schema.json' 'users/ganesh/desktop/onechamp/data.csv'
@@ -27,10 +27,12 @@ def jsonparser(fileloc):
     data['person_id'] = data['person_id'].astype(str)
     data['datetime'] = data['datetime'].astype(str)
     data['building'] = data['building'].astype(str)
-    jsonout = data.to_json(orient = "records")
-    
-    data.to_json(r'{}'.format(outloc),orient = "records")
-    return jsonout
+    jsondict = data.to_dict(orient = "records")
+#write the resultant json in the output
+    with open(outloc,mode='w') as resultfile:
+        json.dump(jsondict,resultfile,indent=2)
+#return the dict object for shcema validation
+    return jsondict
 
 
 def jsonschemaread(schemaloc):

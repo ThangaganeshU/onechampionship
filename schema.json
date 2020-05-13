@@ -1,6 +1,6 @@
 {
     "title": "Floor Access Event",
-    "type": "string",
+    "type": "object",
     "properties": {
         "person_id": {
             "type": "string"
