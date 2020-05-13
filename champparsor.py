@@ -5,7 +5,7 @@
 #        python champparsor.py <filelocation> <schemalocation>
 #
 #Example :
-#        python champparsor.py 'users/ganesh/desktop/onechamp/data.csv' '/users/ganesh/desktop/onechamp/schema.json'
+#        python champparsor.py  '/users/ganesh/desktop/onechamp/schema.json' 'users/ganesh/desktop/onechamp/data.csv'
 #
 #
 ########################################################################################################################
@@ -14,6 +14,7 @@
 
 import pandas as pd
 import jsonschema
+import json
 import unittest
 import sys
 
