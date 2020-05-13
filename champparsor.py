@@ -2,7 +2,7 @@
 #Please execute the code in python 3
 #
 #Run command :
-#        python champparsor.py <filelocation> <schemalocation>
+#        python champparsor.py <schemalocation> <filelocation>
 #
 #Example :
 #        python champparsor.py  '/users/ganesh/desktop/onechamp/schema.json' 'users/ganesh/desktop/onechamp/data.csv'
